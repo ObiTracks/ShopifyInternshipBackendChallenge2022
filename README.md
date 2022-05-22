@@ -1,7 +1,4 @@
-# Obi I. - Shopify Backend Challenge 2022
-
-# Logistics Company Webapp
-
+# Obi I. - Shopify Backend Challenge 2022 - Logistics Company Webapp
 
 ### Demo Links
 
