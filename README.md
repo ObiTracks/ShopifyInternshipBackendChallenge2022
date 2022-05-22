@@ -4,7 +4,7 @@
 
 Hosted on Heroku: [https://shopify-challenge-2022-obi.herokuapp.com/](https://shopify-challenge-2022-obi.herokuapp.com/)
 
-Deployed on Replit (server not automaticall booting in replit enviornment when url is accessed): [https://6905385c-248c-4c2f-8c4a-c28ad949278e.id.repl.co](https://6905385c-248c-4c2f-8c4a-c28ad949278e.id.repl.co/)
+Deployed on Replit (server not automatically booting in replit enviornment when url is accessed): [https://6905385c-248c-4c2f-8c4a-c28ad949278e.id.repl.co](https://6905385c-248c-4c2f-8c4a-c28ad949278e.id.repl.co/)
 
 ## **What it Does**
 
