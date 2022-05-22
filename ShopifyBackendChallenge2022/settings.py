@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ksr03qupn@6ttm6y3=7-so1uh-a!u_)g)bs70symqs-fy_7n-j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0','shopify-challenge-2022-obi.herokuapp.com']
 
 
 # Application definition
