@@ -17,7 +17,7 @@ This webapp is a simple demonstration of backend CRUD fundamentals. This was bui
 
 ## How it works
 
-The site is very simple. Simply enter inventories you want to add to the correpsonding form on the right side of the screen, or shipments you want to create. 
+The site is very simple - simply create the inventories and shipments you want using the forms on the right side of the screen and view them all in the tables on the left side
 
 When creating a shipment, you can select multiple inventories to assign to it. 
 
