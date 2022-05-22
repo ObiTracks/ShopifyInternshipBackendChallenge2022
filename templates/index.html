@@ -14,20 +14,20 @@
         <div class="container left" id="left-container">
             <h2>Inventory</h2>
             <table>
-                <thead>
+                <tr class="thead">
                     <th>Name</th>
-                    <th>Quantity 1</th>
+                    <th>Quantity</th>
                     <th>Per Value</th>
                     <th>Shipment</th>
                     <th>Edit</th>
                     <th>Delete</th>
-                </thead>
+                </tr>
 
                 {% for inventory in inventories %}
                     <tr>
                         <td>{{inventory.name}}</td>
                         <td>{{inventory.quantity}}</td>
-                        <td>{{inventory.per_value}}</td>
+                        <td>${{inventory.per_value}}</td>
                         <td>{{inventory.shipment}}</td>
                         <td>
                             <a href="{% url 'load-instance' 'inventory' inventory.id %}">Edit</a>
@@ -42,21 +42,24 @@
 
             <h2>Shipments</h2>
             <table>
-                <thead>
+                <tr class="thead">
                     <th>Recipient</th>
                     <th>Total Inventory</th>
+                    <th>Unique Inventory</th>
                     <th>Total Value</th>
                     <th>Destination</th>
                     <th>Shipment Date</th>
                     <th>Edit</th>
                     <th>Delete</th>
-                </thead>
+                </tr>
 
                 {% for shipment in shipments %}
-                <tr>
+                <tr class="inventory">
                     <td>{{shipment.recipient}}</td>
                     <td>{{shipment.total_inventory_count}}</td>
-                    <td>{{shipment.total_value}}</td>
+                    <td>{{shipment.unique_inventory_count}}
+                    </td>
+                    <td>${{shipment.total_value}}</td>
                     <td>{{shipment.destination}}</td>
                     <td>{{shipment.shipment_date}}</td>
                     <td>
@@ -64,7 +67,14 @@
                     </td>
                     <td>
                         <a href="{% url 'delete-object' 'shipment' shipment.id %}">Delete</a>
+                        <div class="modal">
+                            <h3>Inventory</h3>
+                            {% for inventory in shipment.inventory_set.all %}
+                                <p>{{inventory}}</p>
+                            {% endfor %}
+                        </div>
                     </td>
+                    
                 </tr>
                 {% endfor %}
                 
@@ -80,6 +90,7 @@
                 
             <input type="hidden" name="form_id" value="inventory-form">
                 <button>submit</button>
+                <a href="{% url 'dashboard' %}"><button>clear form</button></a>
 
                 {% comment %} {% include 'button.html' with text="Submit" type="submit"%}
                 {% include 'button.html' with text="Reset" type="reset" %} {% endcomment %}
@@ -92,6 +103,7 @@
 
                 <input type="hidden" name="form_id" value="shipment-form">
                 <button>submit</button>
+                <button formaction="{% url 'dashboard' %}">clear form</button>
             </form>
             
         </div>
