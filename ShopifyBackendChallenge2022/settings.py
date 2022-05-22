@@ -26,8 +26,16 @@ SECRET_KEY = 'django-insecure-ksr03qupn@6ttm6y3=7-so1uh-a!u_)g)bs70symqs-fy_7n-j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0','shopify-challenge-2022-obi.herokuapp.com']
+ALLOWED_HOSTS = [
+    '127.0.0.1', 
+    '0.0.0.0', 
+    '6905385c-248c-4c2f-8c4a-c28ad949278e.id.repl.co',
+    'https://6905385c-248c-4c2f-8c4a-c28ad949278e.id.repl.co',
+    'shopify-challenge-2022-obi.herokuapp.com'
+]
 
+#Replit Configuration
+X_FRAME_OPTIONS = '*'
 
 # Application definition
 
@@ -46,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
