@@ -2,9 +2,8 @@
 
 # Logistics Company Webapp
 
----
 
-**Demo Links:**
+### Demo Links
 
 Hosted on Heroku: [https://shopify-challenge-2022-obi.herokuapp.com/](https://shopify-challenge-2022-obi.herokuapp.com/)
 
