@@ -22,3 +22,16 @@ The site is very simple - simply create the inventories and shipments you want u
 When creating a shipment, you can select multiple inventories to assign to it. 
 
 Then finally view all the objects you’ve made and edited in the tables on the left and boom, you’ve successfully used the site to do some basic logistics management.
+
+## How to Run Locally
+1. Need the following installed globally on your computer
+- pip
+- pipenv
+2. Actitvate the virtual environment
+- Run `pipenv shell` in the folder of the repo
+- Run `pipenv install -r requirements.txt`
+3. Get the database up to speed (in case theres changes that havent been migrated - always wise to do on first boot up)
+- `python manage.py makemigrations`
+- `python manage.py migrate`
+4. Run the local test local test server
+- `python manage.py runserver`
